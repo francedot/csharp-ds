@@ -143,12 +143,6 @@ namespace CSharp.DS.Core.Tree
             return result;
         }
 
-        // [1,2,3,8,6,7,4,9] post-order traversal
-        // [9,4,7,6,8,3,2,1] inorder mirrored
-        // Inorder traversal but mirrored and starting with rightmost
-
-        // Post-order traversal 2 stacks
-
         /// <summary>
         /// Visit left, right, current.
         /// </summary>
@@ -197,10 +191,6 @@ namespace CSharp.DS.Core.Tree
 
             return s2.Select(n => n.val).ToList();
         }
-        // [9,3,4,1,2,8,7,6] level-order traversal
-        // Use a queue and at each level collect L nodes where L is the level. L=1 for root
-        // Using a queue instead of a stack guarantees that we visit the neighbors first
-        // Level-order traversal (BFS)
 
         /// <summary>
         /// Level Order Traversal.

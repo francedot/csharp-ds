@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CSharp.DS.Core
+namespace CSharp.DS.Core.UnionFind
 {
     public class UnionFind<T>
     {

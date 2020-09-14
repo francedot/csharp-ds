@@ -3,7 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace CSharp.DS.Core
+namespace CSharp.DS.Core.Queue
 {
     /// <summary>
     /// Adapter DS to mimic the Java Priority Queue interface.
