@@ -1,4 +1,5 @@
 ﻿using CSharp.DS.Core.Heap;
+using CSharp.DS.Core.UnionFind;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,4 +1,6 @@
-﻿namespace CSharp.DS.Core.LinkedList
+﻿using System;
+
+namespace CSharp.DS.Core.LinkedList
 {
     public class DoublyLinkedList<T>
     {
@@ -30,6 +32,11 @@
                 prev = null;
                 next = null;
             }
+        }
+
+        internal bool Any()
+        {
+            throw new NotImplementedException();
         }
 
         public DLLNode head;
@@ -106,36 +113,39 @@
             count++;
         }
 
-        public void RemoveHead()
+        public DLLNode RemoveHead()
         {
+            var toRemove = head;
             if (head == null)
-            {
-                return;
-            }
+                return null;
             if (tail == head)
             {
                 head = null;
                 tail = null;
-                return;
+                return null;
             }
             head = head.next;
             head.prev = null;
+
+            return toRemove;
         }
 
-        public void RemoveTail()
+        public DLLNode RemoveTail()
         {
+            var toRemove = tail;
+
             if (tail == null)
-            {
-                return;
-            }
+                return null;
             if (tail == head)
             {
                 head = null;
                 tail = null;
-                return;
+                return null;
             }
             tail = tail.prev;
             tail.next = null;
+
+            return toRemove;
         }
     }
 }
