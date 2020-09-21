@@ -6,146 +6,108 @@ namespace CSharp.DS.Core.LinkedList
     {
         public class DLLNode
         {
-            public T value;
-
-            public DLLNode next;
+            public T val;
             public DLLNode prev;
+            public DLLNode next;
 
-            public DLLNode(T value)
+            public DLLNode(T val)
             {
-                this.value = value;
+                this.val = val;
             }
 
-            /// <summary>
-            /// Helper function to detach a node from the List
-            /// </summary>
             public void Detach()
             {
                 if (prev != null)
-                {
-                    prev.next = next;
-                }
+                    prev.next = this.next;
                 if (next != null)
-                {
-                    next.prev = prev;
-                }
-                prev = null;
-                next = null;
+                    this.next.prev = prev;
             }
         }
 
-        internal bool Any()
-        {
-            throw new NotImplementedException();
-        }
-
-        public DLLNode head;
-        public DLLNode tail;
-        public int count;
+        public DLLNode dummyHead;
+        public DLLNode dummyTail;
 
         public DoublyLinkedList()
         {
+            dummyHead = new DLLNode(default);
+            dummyTail = new DLLNode(default);
+            dummyHead.next = dummyTail;
+            dummyTail.prev = dummyHead;
+        }
+
+        public DLLNode Front() => dummyHead.next;
+        public DLLNode Rear() => dummyTail.prev;
+        public bool Any() => dummyHead.next != dummyTail;
+
+        public void Prepend(DLLNode node)
+        {
+            var prevHead = dummyHead.next;
+            dummyHead.next = node;
+            node.prev = dummyHead;
+            node.next = prevHead;
+            prevHead.prev = node;
         }
 
         public void Append(DLLNode node)
         {
-            if (tail == node)
+            var prevTail = dummyTail.prev;
+            dummyTail.prev = node;
+            node.next = dummyTail;
+            node.prev = prevTail;
+            prevTail.next = node;
+        }
+
+        public DLLNode RemoveFirst()
+        {
+            DLLNode removed = null;
+            if (!Any())
             {
-                return;
+                return removed;
             }
 
-            if (tail == null)
+            removed = dummyHead.next;
+            removed.Detach();
+
+            return removed;
+        }
+
+        public DLLNode RemoveLast()
+        {
+            DLLNode removed = null;
+            if (!Any())
             {
-                head = node;
-                tail = node;
+                return removed;
             }
-            else if (head == tail)
+
+            removed = dummyTail.prev;
+            removed.Detach();
+
+            return removed;
+        }
+
+        public bool Contains(DLLNode node)
+        {
+            var p = Front();
+            while (p != dummyTail)
             {
-                node.prev = tail;
-                tail = node;
-                head.next = tail;
-            }
-            else
-            {
-                if (head == node)
+                if (p == node)
                 {
-                    RemoveHead();
+                    return true;
                 }
-                node.Detach();
-                tail.next = node;
-                node.prev = tail;
-                tail = node;
+                p = p.next;
             }
 
-            count++;
+            return false;
         }
 
-        public void Prepend(DLLNode node)
+        public bool Remove(DLLNode node)
         {
-            if (head == node)
-            {
-                return;
-            }
+            if (!Contains(node))
+                return false;
 
-            if (head == null)
-            {
-                head = node;
-                tail = node;
-            }
-            else if (head == tail)
-            {
-                tail.prev = node;
-                head = node;
-                head.next = tail;
-            }
-            else
-            {
-                if (tail == node)
-                {
-                    RemoveTail();
-                }
-                node.Detach();
-                head.prev = node;
-                node.next = head;
-                head = node;
-            }
+            node.Detach();
 
-            count++;
-        }
-
-        public DLLNode RemoveHead()
-        {
-            var toRemove = head;
-            if (head == null)
-                return null;
-            if (tail == head)
-            {
-                head = null;
-                tail = null;
-                return null;
-            }
-            head = head.next;
-            head.prev = null;
-
-            return toRemove;
-        }
-
-        public DLLNode RemoveTail()
-        {
-            var toRemove = tail;
-
-            if (tail == null)
-                return null;
-            if (tail == head)
-            {
-                head = null;
-                tail = null;
-                return null;
-            }
-            tail = tail.prev;
-            tail.next = null;
-
-            return toRemove;
+            return true;
         }
     }
 }
