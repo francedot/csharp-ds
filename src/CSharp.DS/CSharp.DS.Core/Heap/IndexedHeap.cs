@@ -18,6 +18,8 @@ namespace CSharp.DS.Core.Heap
         private readonly Func<T, T, int> _compareFunc;
         private readonly Dictionary<T, int> _indexes;
 
+        public IndexedHeap(Func<T, T, int> compareFunc) : this(new List<T>(), compareFunc) { }
+
         public IndexedHeap(IList<T> elements, Func<T, T, int> compareFunc)
         {
             _elements = elements;
@@ -125,7 +127,7 @@ namespace CSharp.DS.Core.Heap
             _indexes.Remove(element);
 
             // Sift down the indexes
-            for (var i = _elements.Count() - 1; i >= index; i++)
+            for (var i = _elements.Count() - 1; i >= index; i--)
                 _indexes[_elements.ElementAt(i)] = i - 1;
 
             Heapify();
