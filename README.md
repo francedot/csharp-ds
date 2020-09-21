@@ -2,10 +2,16 @@
 *From solving 200+ Leetcode problems*
 
 
-#### My 2 cents on how to implement the most common DS using C#:
+#### My 2 cents on how to implement the most common DS and Algorithms using C#:
 
 * **Linked List**
   * [Singly Linked List](./src/CSharp.DS/CSharp.DS.Core/LinkedList/SinglyLinkedList.cs)
+    * [Reverse List](./src/CSharp.DS/CSharp.DS.Core/LinkedList/SinglyLinkedList.cs#L122)
+    * [Reverse K groups](./src/CSharp.DS/CSharp.DS.Core/LinkedList/SinglyLinkedList.cs#L147)
+    * [Detect Cycle](./src/CSharp.DS/CSharp.DS.Core/LinkedList/SinglyLinkedList.cs#L204)
+    * [Find Intersection](./src/CSharp.DS/CSharp.DS.Core/LinkedList/SinglyLinkedList.cs#L230)
+    * [Swap pairs](./src/CSharp.DS/CSharp.DS.Core/LinkedList/SinglyLinkedList.cs#L258)
+    * [Swap opposites](./src/CSharp.DS/CSharp.DS.Core/LinkedList/SinglyLinkedList.cs#L288)
   * [Doubly Linked List](./src/CSharp.DS/CSharp.DS.Core/LinkedList/DoublyLinkedList.cs)
 * **Queue**
   * [Queue (using Array)](./src/CSharp.DS/CSharp.DS.Core/Queue/QueueArray.cs)
@@ -26,14 +32,29 @@
   * [LRU (Least Recently Used) Cache](./src/CSharp.DS/CSharp.DS.Core/Cache/LRUCache.cs)
   * [LFU (Least frequently Used) Cache](./src/CSharp.DS/CSharp.DS.Core/Cache/LFUCache.cs)
 * **Graph**
-  * [Graph (Unweighted)](./src/CSharp.DS/CSharp.DS.Core/Graph/Graph.cs) with DFS, BFS traversals
-  * [Graph (Weighted)](./src/CSharp.DS/CSharp.DS.Core/Graph/WeightedGraph.cs) with Dijstra, Prim, Kruskal greedy algorithms
+  * [Graph (Unweighted)](./src/CSharp.DS/CSharp.DS.Core/Graph/Graph.cs)
+    * [Depth First Traversal](./src/CSharp.DS/CSharp.DS.Core/Graph/Graph.cs#L48)
+    * [Breadth First Traversal](./src/CSharp.DS/CSharp.DS.Core/Graph/Graph.cs#L102)
+  * [Graph (Weighted)](./src/CSharp.DS/CSharp.DS.Core/Graph/WeightedGraph.cs)
+    * [Kruskal's Minimum Spanning Tree](./src/CSharp.DS/CSharp.DS.Core/Graph/WeightedGraph.cs#L86)
+    * [Prim's Minimum Spanning Tree](./src/CSharp.DS/CSharp.DS.Core/Graph/WeightedGraph.cs#L120)
+    * [Dijstra's Shortest Path](./src/CSharp.DS/CSharp.DS.Core/Graph/WeightedGraph.cs#L163)
   * [Graph (Topological Sort)](./src/CSharp.DS/CSharp.DS.Core/Graph/TopologicalGraph.cs)
 * **N-ary Tree**
-  * [N-ary Tree](./src/CSharp.DS/CSharp.DS.Core/Tree/N-ary/Tree.cs) with DFS, BFS traversals
-  * [Codec (Serialization)](./src/CSharp.DS/CSharp.DS.Core/Tree/N-ary/Codec.cs)
+  * [N-ary Tree](./src/CSharp.DS/CSharp.DS.Core/Tree/N-ary/Tree.cs)
+    * [Depth First Traversal](./src/CSharp.DS/CSharp.DS.Core/Tree/N-ary/Tree.cs#L13)
+    * [Breadth First Traversal](./src/CSharp.DS/CSharp.DS.Core/Tree/N-ary/Tree.cs#L57)
+  * [Tree Encoding](./src/CSharp.DS/CSharp.DS.Core/Tree/N-ary/Codec.cs)
 * **Binary Tree**
-  * [Binary Tree](./src/CSharp.DS/CSharp.DS.Core/Tree/Binary/BinaryTree.cs) with pre/in/post/level/zigzag/vertical traversals and construct Binary Search Tree
+  * [Binary Tree](./src/CSharp.DS/CSharp.DS.Core/Tree/Binary/BinaryTree.cs)
+    * [Preorder Traversal](./src/CSharp.DS/CSharp.DS.Core/Tree/Binary/BinaryTree.cs#L24)
+    * [Inorder Traversal](./src/CSharp.DS/CSharp.DS.Core/Tree/Binary/BinaryTree.cs#L71)
+    * [Postorder Traversal](./src/CSharp.DS/CSharp.DS.Core/Tree/Binary/BinaryTree.cs#L140)
+    * [Level order Traversal](./src/CSharp.DS/CSharp.DS.Core/Tree/Binary/BinaryTree.cs#L190)
+    * [Zigzag Level order Traversal](./src/CSharp.DS/CSharp.DS.Core/Tree/Binary/BinaryTree.cs#L252)
+    * [Vertical order Traversal](./src/CSharp.DS/CSharp.DS.Core/Tree/Binary/BinaryTree.cs#L313)
+  * [Binary Search Tree](./src/CSharp.DS/CSharp.DS.Core/Tree/Binary/BinarySearchTree.cs)
+    * [Construct from Sorted Array](./src/CSharp.DS/CSharp.DS.Core/Tree/Binary/BinarySearchTree.cs#L10)
 * **Trie**
   * [Trie](./src/CSharp.DS/CSharp.DS.Core/Trie/Trie.cs)
   * [WordDictionary](./src/CSharp.DS/CSharp.DS.Core/Trie/WordDictionary.cs)
