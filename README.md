@@ -55,6 +55,7 @@
     * [Vertical order Traversal](./src/CSharp.DS/CSharp.DS.Core/Tree/Binary/BinaryTree.cs#L313)
   * [Binary Search Tree](./src/CSharp.DS/CSharp.DS.Core/Tree/Binary/BinarySearchTree.cs)
     * [Construct from Sorted Array](./src/CSharp.DS/CSharp.DS.Core/Tree/Binary/BinarySearchTree.cs#L10)
+  * [Segment Tree](./src/CSharp.DS/CSharp.DS.Core/Tree/Binary/SegmentTree.cs)
 * **Trie**
   * [Trie](./src/CSharp.DS/CSharp.DS.Core/Trie/Trie.cs)
   * [WordDictionary](./src/CSharp.DS/CSharp.DS.Core/Trie/WordDictionary.cs)
