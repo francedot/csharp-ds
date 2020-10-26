@@ -5,6 +5,6 @@
   * [Top Down (Memoization)](./Fibonacci.cs#L28)
   * [Bottom Up (Tabulation)](./Fibonacci.cs#L54)
   * [Bottom Up](./Fibonacci.cs#L74)
-* [Max Subarray Sum (Kadane's))](./MaxSubArraySum_Kadane.cs)
+* [Max Subarray Sum (Kadane's)](./MaxSubarraySum_Kadane.cs)
 * [Target Subarray Sum](./TargetSubarraySum.cs)
 * [Trapping the rain water](./TrappingRainWater.cs)

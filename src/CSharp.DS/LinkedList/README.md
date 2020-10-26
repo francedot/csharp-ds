@@ -1,0 +1,13 @@
+# Linked List
+* [Singly Linked List](./SinglyLinkedList.cs)
+  * [Reverse List (Iterative)](./SinglyLinkedList.cs#L123)
+  * [Reverse List (Recursive)](./SinglyLinkedList.cs#L159)
+  * [Reverse K groups](./SinglyLinkedList.cs#L181)
+  * [Detect Loop](./SinglyLinkedList.cs#L238)
+  * [Find Intersection Node](./SinglyLinkedList.cs#L264)
+  * [Find start of the Loop](./SinglyLinkedList.cs#L287)
+  * [Swap pairs](./SinglyLinkedList.cs#L331)
+  * [Swap opposites](./SinglyLinkedList.cs#L361)
+  * [Delete Sorted Duplicates](./SinglyLinkedList.cs#L385)
+  * [Copy with Random Pointer](./SinglyLinkedList.cs#L431)
+* [Doubly Linked List](./DoublyLinkedList.cs)

@@ -1,7 +1,7 @@
 # Order Statistics
 * [Find Median](./FindMedian.cs)
   * [Find Median of unsorted Arrays](./FindMedian.cs#L21)
-  * [Find Median of unsorted Arrays](./FindMedian.cs#L37)
+  * [Find Median of sorted Arrays](./FindMedian.cs#L37)
 * [Median Finder (from stream)](./MedianFinder.cs)
 * [Quick Select](./QuickSelect.cs)
   * [Quick Select (default pivot)](./QuickSelect.cs#L18)
