@@ -11,8 +11,6 @@ namespace CSharp.DS.Queue
     /// <typeparam name="T"></typeparam>
     public class PriorityQueue<T> : HeapBase<T>
     {
-        private readonly HeapBase<T> _heap;
-
         public PriorityQueue(IList<T> elements, Func<T, T, int> compareFunc) : base(elements, compareFunc)
         {
         }
@@ -21,8 +19,8 @@ namespace CSharp.DS.Queue
         {
         }
 
-        public void Offer(T element) => _heap.Push(element);
+        public void Offer(T element) => base.Push(element);
 
-        public T Poll() => _heap.Pop();
+        public T Poll() => base.Pop();
     }
 }
