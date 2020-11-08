@@ -4,3 +4,4 @@
 * [Merge Sort](./MergeSort.cs)
 * [K-way Merge](./MergeSortedArrays.cs)
 * [QuickSort](./QuickSort.cs)
+* [Top K Frequent](./TopKFrequent.cs)
