@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CSharp.Algo.Prefix
 {
-    public partial class Prefix
+    public partial class PrefixSuffix
     {
         /*
             Given an array find the number that is sum of its left and right subarrays.
