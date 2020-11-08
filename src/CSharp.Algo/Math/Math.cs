@@ -1,4 +1,6 @@
-﻿namespace CSharp.DS.Algo.Math
+﻿using System.Linq;
+
+namespace CSharp.DS.Algo.Math
 {
     public partial class Math
     {
@@ -132,6 +134,33 @@
             }
 
             return decValue;
+        }
+
+        /*
+            Given array values = [1, 3, 4, 8] and indices [0, 2],
+            write a function that will return an array containing the product of all the values except those in indices.
+            So, in this example, the result of that function would contain the products of 3, 4, 8 and 1, 3, 8.
+         */
+
+        public int[] ProductExcept(int[] nums, int[] exceptIndexes)
+        {
+            // TC
+            // nums: [1, 3, 4, 8]
+            // Total Product: 96
+
+            // indexes: [0, 2]
+
+            // Product / n[0]: 96 / 1 = 96 
+            // Product / n[2]: 96 / 4 = 24 
+
+
+            var result = new int[exceptIndexes.Length];
+            var numsProduct = nums.Aggregate((result, item) => result * item);
+
+            for (int i = 0; i < exceptIndexes.Length; i++)
+                result[i] = numsProduct / nums[exceptIndexes[i]];
+
+            return result;
         }
     }
 }
