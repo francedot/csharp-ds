@@ -52,6 +52,36 @@ namespace CSharp.DS.Algo.BinarySearch
             return left;
         }
 
+        /*
+        Find the missing number from a sorted array.
+        Input = [1, 2, 3, 4, 6, 7, 8, 9] Output = 5. I used binary search.
+     */
+
+        public static int FindMissingNumberSortedArray(int[] nums)
+        {
+            // 1, 2, 3, 4, 6, 7, 8, 9
+            // 1  2  3  4  5  6  7  8
+
+            // cut at 4, 4<=4 => go right
+
+            // 1, 3, 4, 5, 6, 7, 8, 9
+            // 1  2  3  4  5  6  7  8
+
+            // cut at 6, 6>5 => go left
+
+            int left = 0, right = nums.Length - 1;
+            while (left < right)
+            {
+                var mid = left + (right - left) / 2;
+                if (nums[mid] > mid + 1)
+                    right = mid;
+                else left = mid + 1; // go right
+            }
+
+            // After exiting the while loop, left is the minimal k satisfying the condition function
+            return left + 1;
+        }
+
         public static int Sqrt(int x)
         {
             // First we need to search for minimal k satisfying condition
