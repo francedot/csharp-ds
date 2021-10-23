@@ -69,7 +69,7 @@ namespace CSharp.DS.Cache
                 return;
 
             var existing = GetValue(key);
-            if (existing != -1)
+            if (existing != null)
             {
                 _items[key].Value.Value = value;
                 return;
