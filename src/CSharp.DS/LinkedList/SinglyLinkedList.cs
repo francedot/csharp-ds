@@ -32,7 +32,7 @@ namespace CSharp.DS.LinkedList
                 return;
             }
 
-            if (tail == null)
+            if (head == null && tail == null)
             {
                 head = node;
                 tail = node;
